@@ -6,7 +6,7 @@
 /*   By: ewoillar <ewoillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 13:09:28 by ewoillar          #+#    #+#             */
-/*   Updated: 2024/08/05 18:03:09 by ewoillar         ###   ########.fr       */
+/*   Updated: 2024/08/05 18:22:48 by ewoillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,6 @@ void PhoneBook::SearchContact()
 
 void PhoneBook::ShowContact()
 {
-	//print all contacts
 	for (int i = 0; i < this->contact_count; i++)
 	{
 		std::cout

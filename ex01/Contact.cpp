@@ -6,11 +6,15 @@
 /*   By: ewoillar <ewoillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 13:11:57 by ewoillar          #+#    #+#             */
-/*   Updated: 2024/08/05 16:50:41 by ewoillar         ###   ########.fr       */
+/*   Updated: 2024/08/05 18:14:24 by ewoillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
+
+Contact::Contact()
+{
+}
 
 Contact::Contact(std::string firstName, std::string lastName, std::string nickname, std::string phoneNumber, std::string darkSecret)
 {

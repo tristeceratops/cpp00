@@ -6,7 +6,7 @@
 /*   By: ewoillar <ewoillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 13:11:59 by ewoillar          #+#    #+#             */
-/*   Updated: 2024/08/05 16:52:48 by ewoillar         ###   ########.fr       */
+/*   Updated: 2024/08/05 18:25:22 by ewoillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 class Contact
 {
 public:
+	Contact();
 	Contact(std::string firstName, std::string lastName, std::string nickname, std::string phoneNumber, std::string darkSecret);
 	~Contact();
 	std::string getFirstName();
@@ -29,7 +30,6 @@ public:
 	void setDarkSecret(std::string darkSecret);
 
 private:
-	std::string firstName;
 	std::string firstName;
 	std::string lastName;
 	std::string nickname;
