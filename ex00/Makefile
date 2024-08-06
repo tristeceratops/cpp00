@@ -1,6 +1,7 @@
 NAME := megaphone
 FLAGS := -Wall -Wextra -Werror -std=c++98
 FILES := megaphone.cpp
+OBJ := $(FILES:.cpp=.o)
 
 all: $(NAME)
 

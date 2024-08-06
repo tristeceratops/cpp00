@@ -6,7 +6,7 @@
 /*   By: ewoillar <ewoillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 13:09:28 by ewoillar          #+#    #+#             */
-/*   Updated: 2024/08/05 18:22:48 by ewoillar         ###   ########.fr       */
+/*   Updated: 2024/08/06 13:52:06 by ewoillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ PhoneBook::PhoneBook()
 {
 	this->contact_count = 0;
 	this->oldest_contact = 0;
+	this->exit = 0;
 }
 
 PhoneBook::~PhoneBook()
@@ -107,6 +108,11 @@ void PhoneBook::ShowContact()
 void PhoneBook::Exit()
 {
 	std::cout << "Exiting..." << std::endl;
-	exit(0);
+	this->exit = 1;
+}
+
+int	PhoneBook::GetExit()
+{
+	return (this->exit);
 }
 
