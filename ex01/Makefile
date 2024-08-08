@@ -1,7 +1,6 @@
 NAME := PhoneBook
 FLAGS := -Wall -Wextra -Werror -std=c++98
 FILES := Contact.cpp PhoneBook.cpp main.cpp
-HEADERS := Contact.hpp PhoneBook.hpp PhoneBook.h
 OBJ := $(FILES:.cpp=.o)
 
 all: $(NAME)
