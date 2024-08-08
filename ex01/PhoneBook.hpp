@@ -6,12 +6,15 @@
 /*   By: ewoillar <ewoillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 13:10:15 by ewoillar          #+#    #+#             */
-/*   Updated: 2024/08/06 13:52:14 by ewoillar         ###   ########.fr       */
+/*   Updated: 2024/08/08 11:02:00 by ewoillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.h"
-#include "Contact.hpp"
+#pragma once
+#ifndef PHONE_BOOK_H
+# define PHONE_BOOK_H
+# include "PhoneBook.h"
+# include "Contact.hpp"
 
 class PhoneBook
 {
@@ -29,3 +32,5 @@ class PhoneBook
 		int exit;
 		int	oldest_contact;
 };
+
+#endif

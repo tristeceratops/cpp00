@@ -6,11 +6,14 @@
 /*   By: ewoillar <ewoillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 13:11:59 by ewoillar          #+#    #+#             */
-/*   Updated: 2024/08/05 18:25:22 by ewoillar         ###   ########.fr       */
+/*   Updated: 2024/08/08 11:02:32 by ewoillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.h"
+#pragma once
+#ifndef CONTACT_H
+# define CONTACT_H
+# include "PhoneBook.h"
 
 class Contact
 {
@@ -35,4 +38,6 @@ private:
 	std::string nickname;
 	std::string phoneNumber;
 	std::string darkSecret;
-};;
+};
+
+#endif
