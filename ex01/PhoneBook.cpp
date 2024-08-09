@@ -6,7 +6,7 @@
 /*   By: ewoillar <ewoillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 13:09:28 by ewoillar          #+#    #+#             */
-/*   Updated: 2024/08/09 12:54:33 by ewoillar         ###   ########.fr       */
+/*   Updated: 2024/08/09 13:07:12 by ewoillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,24 +76,30 @@ void PhoneBook::SearchContact()
 		return;
 	}
 	this->ShowContact();
-	std::cout << "Enter index: ";
-	std::getline(std::cin, input);
-	if (input.length() == 1 && isdigit(input[0]))
+	while (1)
 	{
-		index = input[0] - '0';
-		if (index >= 0 && index < this->contact_count)
+		std::cout << "Enter index: ";
+		std::getline(std::cin, input);
+		if (input.length() == 1 && isdigit(input[0]))
 		{
-			std::cout << "First name: " << this->contacts[index].getFirstName() << std::endl;
-			std::cout << "Last name: " << this->contacts[index].getLastName() << std::endl;
-			std::cout << "Nickname: " << this->contacts[index].getNickname() << std::endl;
-			std::cout << "Phone number: " << this->contacts[index].getPhoneNumber() << std::endl;
-			std::cout << "Dark secret: " << this->contacts[index].getDarkSecret() << std::endl;
+			index = input[0] - '0';
+			if (index >= 0 && index < this->contact_count)
+			{
+				std::cout << "--------------------" << std::endl;
+				std::cout << "First name: " << this->contacts[index].getFirstName() << std::endl;
+				std::cout << "Last name: " << this->contacts[index].getLastName() << std::endl;
+				std::cout << "Nickname: " << this->contacts[index].getNickname() << std::endl;
+				std::cout << "Phone number: " << this->contacts[index].getPhoneNumber() << std::endl;
+				std::cout << "Dark secret: " << this->contacts[index].getDarkSecret() << std::endl;
+				std::cout << "--------------------" << std::endl;
+				break ;
+			}
+			else
+				std::cout << "Invalid index" << std::endl;
 		}
 		else
-			std::cout << "Invalid index" << std::endl;
+			std::cout << "Invalid input" << std::endl;
 	}
-	else
-		std::cout << "Invalid input" << std::endl;
 }
 
 void PhoneBook::ShowContact()
