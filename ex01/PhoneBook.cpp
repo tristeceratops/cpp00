@@ -6,7 +6,7 @@
 /*   By: ewoillar <ewoillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 13:09:28 by ewoillar          #+#    #+#             */
-/*   Updated: 2024/08/09 14:45:59 by ewoillar         ###   ########.fr       */
+/*   Updated: 2024/08/09 14:51:16 by ewoillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,7 @@ void PhoneBook::SearchContact()
 		{
 			if (std::cin.eof())
 			{
+				std::cout << std::endl;
 				std::cin.clear();
 				break ;
 			}
