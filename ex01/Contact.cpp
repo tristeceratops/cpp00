@@ -6,7 +6,7 @@
 /*   By: ewoillar <ewoillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 13:11:57 by ewoillar          #+#    #+#             */
-/*   Updated: 2024/08/05 18:14:24 by ewoillar         ###   ########.fr       */
+/*   Updated: 2024/08/09 11:36:05 by ewoillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,29 +52,4 @@ std::string Contact::getPhoneNumber()
 std::string Contact::getDarkSecret()
 {
 	return this->darkSecret;
-}
-
-void Contact::setFirstName(std::string firstName)
-{
-	this->firstName = firstName;
-}
-
-void Contact::setLastName(std::string lastName)
-{
-	this->lastName = lastName;
-}
-
-void Contact::setNickname(std::string nickname)
-{
-	this->nickname = nickname;
-}
-
-void Contact::setPhoneNumber(std::string phoneNumber)
-{
-	this->phoneNumber = phoneNumber;
-}
-
-void Contact::setDarkSecret(std::string darkSecret)
-{
-	this->darkSecret = darkSecret;
 }

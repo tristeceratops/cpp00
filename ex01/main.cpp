@@ -6,7 +6,7 @@
 /*   By: ewoillar <ewoillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 13:31:32 by ewoillar          #+#    #+#             */
-/*   Updated: 2024/08/06 13:52:35 by ewoillar         ###   ########.fr       */
+/*   Updated: 2024/08/09 11:31:10 by ewoillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,16 @@ int main()
 	{
 		std::cout << "Enter a command: ";
 		std::getline(std::cin, commandline);
+		if (!std::cin)
+		{
+			if (std::cin.eof())
+				break ;
+			else
+			{
+				std::cout << "Error\n";
+				break ;
+			}
+		}
 		if (commandline == "ADD")
 			phonebook->AddContact();
 		else if (commandline == "SEARCH")

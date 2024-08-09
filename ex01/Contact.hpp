@@ -6,7 +6,7 @@
 /*   By: ewoillar <ewoillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 13:11:59 by ewoillar          #+#    #+#             */
-/*   Updated: 2024/08/08 11:02:32 by ewoillar         ###   ########.fr       */
+/*   Updated: 2024/08/09 11:35:59 by ewoillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,6 @@ public:
 	std::string getNickname();
 	std::string getPhoneNumber();
 	std::string getDarkSecret();
-	void setFirstName(std::string firstName);
-	void setLastName(std::string lastName);
-	void setNickname(std::string nickname);
-	void setPhoneNumber(std::string phoneNumber);
-	void setDarkSecret(std::string darkSecret);
 
 private:
 	std::string firstName;

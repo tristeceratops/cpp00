@@ -6,7 +6,7 @@
 /*   By: ewoillar <ewoillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 13:09:28 by ewoillar          #+#    #+#             */
-/*   Updated: 2024/08/06 13:52:06 by ewoillar         ###   ########.fr       */
+/*   Updated: 2024/08/09 12:54:33 by ewoillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,24 @@ void PhoneBook::AddContact()
 
 	std::cout << "Enter first name: ";
 	std::getline(std::cin, first_name);
+	if (first_name.length() == 0)
+		return (std::cout << "Empty fields not allow" << std::endl, (void)0);
 	std::cout << "Enter last name: ";
 	std::getline(std::cin, last_name);
+	if (last_name.length() == 0)
+	return (std::cout << "Empty fields not allow" << std::endl, (void)0);
 	std::cout << "Enter nickname: ";
 	std::getline(std::cin, nickname);
+	if (nickname.length() == 0)
+	return (std::cout << "Empty fields not allow" << std::endl, (void)0);
 	std::cout << "Enter phone number: ";
 	std::getline(std::cin, phone_number);
+	if (phone_number.length() == 0)
+	return (std::cout << "Empty fields not allow" << std::endl, (void)0);
 	std::cout << "Enter dark secret: ";
 	std::getline(std::cin, dark_secret);
+	if (dark_secret.length() == 0)
+	return (std::cout << "Empty fields not allow" << std::endl, (void)0);
 	if (this->contact_count < 8)
 	{
 		this->contacts[this->contact_count] = Contact(first_name, last_name, nickname, phone_number, dark_secret);
@@ -88,14 +98,14 @@ void PhoneBook::SearchContact()
 
 void PhoneBook::ShowContact()
 {
+	std::cout
+	<< std::setw(10) << "index" << "|" 
+	<< std::setw(10) << "first name" << "|" 
+	<< std::setw(10) << "last name" << "|" 
+	<< std::setw(10) << "nickname" 
+	<< std::endl;
 	for (int i = 0; i < this->contact_count; i++)
 	{
-		std::cout
-				<< std::setw(10) << "index" << "|" 
-				<< std::setw(10) << "first name" << "|" 
-				<< std::setw(10) << "last name" << "|" 
-				<< std::setw(10) << "nickname" 
-				<< std::endl;
 		std::cout 
 			<< std::setw(10) << i << "|"
     		<< std::setw(10) << (this->contacts[i].getFirstName().length() > 10 ? this->contacts[i].getFirstName().substr(0, 9) + "." : this->contacts[i].getFirstName()) << "|"
