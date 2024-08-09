@@ -6,7 +6,7 @@
 /*   By: ewoillar <ewoillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 15:51:33 by ewoillar          #+#    #+#             */
-/*   Updated: 2024/08/07 16:29:55 by ewoillar         ###   ########.fr       */
+/*   Updated: 2024/08/09 15:02:58 by ewoillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,35 +102,32 @@ void Account::makeDeposit(int deposit)
 
 bool Account::makeWithdrawal(int withdrawal)
 {
-	this->_amount -= withdrawal;
-	_totalAmount -= withdrawal;
-	this->_nbWithdrawals++;
-	_totalNbWithdrawals++;
 	_displayTimestamp();
-	if (checkAmount())
+	std::cout << "index:" << this->_accountIndex << ";" 
+	<< "p_amount:" << this->_amount << ";"
+	<< "withdrawal:";
+	if (withdrawal < checkAmount())
 	{
-		std::cout << "index:" << this->_accountIndex << ";" 
-		<< "p_amount:" << this->_amount << ";"
-		<< "withdrawal:" << withdrawal << ";" 
+		std::cout << withdrawal << ";" 
 		<< "amount:" << this->_amount - withdrawal << ";"
 		<< "nb_withdrawals:" << this->_nbWithdrawals + 1
 		<< std::endl;
+		this->_amount -= withdrawal;
+		_totalAmount -= withdrawal;
+		this->_nbWithdrawals++;
+		_totalNbWithdrawals++;
+		return true;
 	}
 	else
 	{
-		std::cout << "index:" << this->_accountIndex << ";" 
-		<< "withdrawal:refused"<< std::endl;
-		this->_amount += withdrawal;
-		_totalAmount += withdrawal;
-		this->_nbWithdrawals--;
-		_totalNbWithdrawals--;
+		std::cout << "refused" << std::endl;
+		return false;
 	}
-	return (true);
 }
 
 int Account::checkAmount() const
 {
-	return (this->_amount >= 0);
+	return (this->_amount);
 }
 
 void Account::displayStatus() const

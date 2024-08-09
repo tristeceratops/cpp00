@@ -1,4 +1,4 @@
-NAME := test_account
+NAME := dream
 FLAGS := -Wall -Wextra -Werror -std=c++98
 FILES := Account.cpp tests.cpp
 OBJ := $(FILES:.cpp=.o)
