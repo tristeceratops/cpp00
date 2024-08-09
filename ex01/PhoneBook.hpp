@@ -6,15 +6,16 @@
 /*   By: ewoillar <ewoillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 13:10:15 by ewoillar          #+#    #+#             */
-/*   Updated: 2024/08/08 11:02:00 by ewoillar         ###   ########.fr       */
+/*   Updated: 2024/08/09 14:33:55 by ewoillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #ifndef PHONE_BOOK_H
 # define PHONE_BOOK_H
-# include "PhoneBook.h"
 # include "Contact.hpp"
+# include <iostream>
+# include <iomanip>
 
 class PhoneBook
 {

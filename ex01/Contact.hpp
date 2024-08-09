@@ -6,15 +6,14 @@
 /*   By: ewoillar <ewoillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 13:11:59 by ewoillar          #+#    #+#             */
-/*   Updated: 2024/08/09 11:35:59 by ewoillar         ###   ########.fr       */
+/*   Updated: 2024/08/09 14:32:35 by ewoillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #ifndef CONTACT_H
 # define CONTACT_H
-# include "PhoneBook.h"
-
+# include <string>
 class Contact
 {
 public:

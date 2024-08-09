@@ -6,7 +6,7 @@
 /*   By: ewoillar <ewoillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 13:09:28 by ewoillar          #+#    #+#             */
-/*   Updated: 2024/08/09 13:07:12 by ewoillar         ###   ########.fr       */
+/*   Updated: 2024/08/09 14:45:59 by ewoillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,19 @@ void PhoneBook::SearchContact()
 	{
 		std::cout << "Enter index: ";
 		std::getline(std::cin, input);
+		if (!std::cin)
+		{
+			if (std::cin.eof())
+			{
+				std::cin.clear();
+				break ;
+			}
+			else
+			{
+				std::cout << "Error\n";
+				break ;
+			}
+		}
 		if (input.length() == 1 && isdigit(input[0]))
 		{
 			index = input[0] - '0';
@@ -131,4 +144,3 @@ int	PhoneBook::GetExit()
 {
 	return (this->exit);
 }
-
