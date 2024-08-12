@@ -6,7 +6,7 @@
 /*   By: ewoillar <ewoillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 13:09:28 by ewoillar          #+#    #+#             */
-/*   Updated: 2024/08/09 14:51:16 by ewoillar         ###   ########.fr       */
+/*   Updated: 2024/08/12 10:57:28 by ewoillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,10 +109,16 @@ void PhoneBook::SearchContact()
 				break ;
 			}
 			else
+			{
 				std::cout << "Invalid index" << std::endl;
+				this->ShowContact();
+			}
 		}
 		else
+		{
 			std::cout << "Invalid input" << std::endl;
+			this->ShowContact();
+		}
 	}
 }
 

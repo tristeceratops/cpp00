@@ -6,7 +6,7 @@
 /*   By: ewoillar <ewoillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 13:11:59 by ewoillar          #+#    #+#             */
-/*   Updated: 2024/08/09 14:32:35 by ewoillar         ###   ########.fr       */
+/*   Updated: 2024/08/12 10:58:07 by ewoillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,22 @@
 # include <string>
 class Contact
 {
-public:
-	Contact();
-	Contact(std::string firstName, std::string lastName, std::string nickname, std::string phoneNumber, std::string darkSecret);
-	~Contact();
-	std::string getFirstName();
-	std::string getLastName();
-	std::string getNickname();
-	std::string getPhoneNumber();
-	std::string getDarkSecret();
+	public:
+		Contact();
+		Contact(std::string firstName, std::string lastName, std::string nickname, std::string phoneNumber, std::string darkSecret);
+		~Contact();
+		std::string getFirstName();
+		std::string getLastName();
+		std::string getNickname();
+		std::string getPhoneNumber();
+		std::string getDarkSecret();
 
-private:
-	std::string firstName;
-	std::string lastName;
-	std::string nickname;
-	std::string phoneNumber;
-	std::string darkSecret;
+	private:
+		std::string firstName;
+		std::string lastName;
+		std::string nickname;
+		std::string phoneNumber;
+		std::string darkSecret;
 };
 
 #endif

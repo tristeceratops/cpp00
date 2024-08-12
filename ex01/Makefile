@@ -1,4 +1,4 @@
-NAME := phoneBook
+NAME := MyAwesomePhoneBook
 FLAGS := -Wall -Wextra -Werror -std=c++98
 FILES := Contact.cpp PhoneBook.cpp main.cpp
 OBJ := $(FILES:.cpp=.o)
